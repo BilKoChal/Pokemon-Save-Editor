@@ -6,7 +6,7 @@ A web-based tool for editing Pokemon save files, specifically optimized for Gene
 - **Gen 1 Support**: Fully parses `.sav` and `.srm` files (32KB).
 - **Inventory Management**: View Bag items and PC items.
 - **PC Storage**: Visualize Pokemon in the current PC Box.
-- **Detailed Trainer Card**: View ID, Money, Play Time (Hours/Minutes), and Badges.
+- **Detailed Trainer Card**: View ID, Money, Play Time (HH:MM:SS), and Badges.
 - **Party Analysis**: Visualizes stats and sprites of your current team.
 - **Secure**: Runs entirely in the browser using the FileReader API. No data is sent to any server.
 
