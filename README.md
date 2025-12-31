@@ -1,6 +1,6 @@
 # BilKo's PC: Gen 1 Save Editor
 
-![Version](https://img.shields.io/badge/version-1.28.2-blue.svg)
+![Version](https://img.shields.io/badge/version-1.34.1-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Gen 1 Compatible](https://img.shields.io/badge/Game-Pokemon%20Red%2FBlue%2FYellow-red.svg)
 
@@ -21,8 +21,23 @@ Curated by **BilKo(Ch)al** with advanced AI support, this project aims to provid
 - **Intelligent Version Detection**: Automatically identifies Red, Blue, or Yellow versions using heuristic analysis of the Pokedex and specialized memory flags.
 - **Binary Export**: Saves changes back to a binary format that works on emulators and flash carts.
 
+### 🔄 Trade Center
+- **Import Pokemon**: Load a second `.sav` file alongside your main one.
+- **Cross-Save Trading**: Drag and drop (or select and click) to move Pokemon between two different save files.
+- **Batch Import**: Select multiple Pokemon from an external save and move them all at once to your game.
+- **Mobile Friendly**: New tabbed interface designed specifically for trading on mobile devices.
+- **Backup Support**: Safely export Pokemon to another file before starting a new game.
+
 ### 🛠️ Advanced Editing Tools
+- **Smart Move Mode**: 
+    - **Power Selection**: Use **Ctrl+Click** to toggle selections and **Shift+Click** to select ranges of Pokemon.
+    - **Select All**: Quickly select all Pokemon in a Box with one click.
+    - **Smart Swap**: Select multiple Pokemon and click on an occupied slot to sequentially swap them.
+    - **Capacity Checks**: Prevents you from moving more Pokemon than a Box or Party can hold.
+- **Toast Notifications**: Modern, non-intrusive alerts for feedback and errors.
 - **Trainer Editor**: Modify your name, money (capped at 999,999), and view badges/playtime.
+- **Level Editor**: Edit your Pokemon's level (1-100) with automatic stat recalculation.
+- **Move Editor**: Change your Pokemon's moveset by selecting from any Gen 1 move.
 - **Party Management**: View your active team with detailed stats. Move Pokemon between Party and Boxes.
 - **PC Storage**: Browse all 12 PC Boxes with visual sprites. Fully supports moving and swapping Pokemon with improved precision and visual feedback.
 - **Inventory & Item Editor**: Manage Bag and PC items. Select any item from a searchable list with sorting (Name/ID) and adjust quantities.
@@ -58,12 +73,14 @@ This project follows a strict **modular architecture** to support future generat
 
 ```
 /src
-├── components/       # Reusable UI components (TrainerCard, PokedexViewer, etc.)
+├── components/       # Reusable UI components (TrainerCard, PokedexViewer, TradeCenter, Toast, etc.)
 ├── core/             # Business Logic Layer
 │   ├── parser.ts     # Main Parser Factory (Dispatcher)
 │   ├── version.ts    # Centralized Version Management
-│   ├── gen1/         # Gen 1 specific logic (Parser, Writer, Offsets)
-│   ├── move_manager.ts # Logic for moving Pokemon between containers
+│   ├── gen1/         # Gen 1 specific logic (Parser, Writer, Offsets, Constants)
+│   ├── move_manager.ts # Logic for moving Pokemon within a save (Single & Batch)
+│   ├── trade_manager.ts # Logic for moving Pokemon BETWEEN saves (Single & Batch)
+│   ├── toast.tsx     # Toast Notification System
 │   ├── theme.ts      # Dynamic theming engine
 │   └── types.ts      # TypeScript interfaces
 ├── data/             # Static Data (Base Stats, Text Strings)
