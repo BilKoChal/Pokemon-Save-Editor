@@ -1,6 +1,6 @@
 # BilKo's PC: Gen 1 Save Editor
 
-![Version](https://img.shields.io/badge/version-1.39.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.40.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Gen 1 Compatible](https://img.shields.io/badge/Game-Pokemon%20Red%2FBlue%2FYellow-red.svg)
 ![PWA Ready](https://img.shields.io/badge/PWA-Offline%20Ready-purple.svg)
@@ -16,7 +16,7 @@ Curated by **BilKo(Ch)al** with advanced AI support, this project aims to provid
 ### 🛡️ Secure & Client-Side
 - **Local Processing**: Uses the HTML5 FileReader API to parse files directly on your machine.
 - **Privacy First**: No save data is ever uploaded to a server.
-- **Offline Capable**: **NEW!** Install the app as a PWA on your phone or desktop. Works completely offline with cached sprites and audio.
+- **Offline Capable**: **UPDATED!** Install the app as a PWA. Go to **Settings > Offline Data** to pre-download all 151 Pokemon sprites and cries for a completely offline experience.
 
 ### 🎮 Comprehensive Save Management
 - **Universal Support**: Fully compatible with `.sav` and `.srm` files (32KB standard size).
@@ -74,7 +74,8 @@ Curated by **BilKo(Ch)al** with advanced AI support, this project aims to provid
 ### Installation (PWA)
 1. Open the site in Chrome or Safari.
 2. Click "Install" in the address bar (Chrome) or "Add to Home Screen" (Safari/Mobile).
-3. The app will now work offline and launch like a native application!
+3. Open **Settings (Gear Icon)**.
+4. Click **"Download Assets"** to cache all images/audio for offline use.
 
 ---
 
@@ -88,6 +89,7 @@ This project follows a strict **modular architecture** to support future generat
 ├── core/             # Business Logic Layer
 │   ├── parser.ts     # Main Parser Factory (Dispatcher)
 │   ├── version.ts    # Centralized Version Management
+│   ├── cache_manager.ts # Offline Asset Pre-fetcher logic
 │   ├── settings.tsx  # Global Settings Context
 │   ├── gen1/         # Gen 1 specific logic (Parser, Writer, Offsets, Constants)
 │   ├── move_manager.ts # Logic for moving Pokemon within a save (Single & Batch)
