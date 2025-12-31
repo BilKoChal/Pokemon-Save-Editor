@@ -1,35 +1,35 @@
-# Pokemon Save Editor
+# BilKo's PC: Gen 1 Save Editor
 
-A web-based tool for editing Pokemon save files, specifically optimized for Generation 1 (Red/Blue/Yellow) with a modular design to support future generations.
+**BilKo's PC** is a comprehensive Pokemon game save editor curated by BilKoChal. It runs entirely in your browser using local file processing, ensuring your save data never leaves your device. Designed with modularity for future generations.
 
 ## Features
 - **Gen 1 Support**: Fully parses `.sav` and `.srm` files (32KB).
 - **Trainer Editing**: Edit Trainer Name and Money directly from the dashboard and **Save Changes** back to a `.sav` file.
-- **Pokedex Viewer**: New! Visualize your Catch/Seen progress with detailed descriptions and sprite tracking.
+- **Trade Evolutions**: Evolve Kadabra, Haunter, Machoke, and Graveler with a single click without trading!
+- **Box Stats**: View calculated stats (Atk/Def/Spc/Spd) for Pokemon even when they are stored in the PC.
+- **Pokedex Viewer**: Visualize your Catch/Seen progress with detailed descriptions and sprite tracking.
 - **Original Filename**: Downloads preserve the original uploaded filename.
 - **Improved Version Detection**: Uses Heuristics (Pokedex exclusives) to distinguish between Red and Blue versions.
 - **Advanced Stats**: View IVs (DVs) and EVs (Stat Experience) for every Pokemon to check legality and training progress.
 - **Interactive Charts**: Analyze stats using Radar (Spider) or Bar charts.
-- **Red/Blue/Yellow Support**: Automatically detects Yellow version. For Red/Blue (which are binary identical), users can toggle the theme by clicking the version badge in the header.
+- **Red/Blue/Yellow Support**: Automatically detects Yellow version. For Red/Blue, users can toggle the theme manually if preferred.
 - **Full PC Storage**: View and navigate all 12 PC Boxes.
-- **Empty Slots**: Visualizes empty slots in Party, PC, and Inventory for future editing capabilities.
 - **Modern Trainer Card**: Beautifully designed trainer card showing Play Time, Money, Badges, Rival Name, and Pokedex Stats.
 - **Detailed Pokemon Viewer**: Click any Pokemon to see Stats, Moves, EXP, and Status.
-- **Accurate Visuals**: Uses Generation 1 specific sprites (magnified pixel-art style) with corrected Internal-to-Dex ID mapping.
+- **Accurate Visuals**: Uses Generation 1 specific sprites (magnified pixel-art style).
 - **Inventory Management**: View Bag items and PC items.
-- **Party Analysis**: Visualizes stats and sprites of your current team with a new modern Grid layout.
 - **Secure**: Runs entirely in the browser using the FileReader API. No data is sent to any server.
 
 ## Deployment Instructions
 1. Download this repository.
 2. Rename `deploy.txt` to `deploy.bat`.
 3. Run `deploy.bat` in Windows.
-4. **Important**: Go to your `Pokemon-Save-Editor-Source` repository settings on GitHub -> Secrets and Variables -> Actions. Create a new repository secret named `ACTION_TOKEN` and paste your GitHub Personal Access Token there.
+4. **Important**: Go to your `BilKos-PC-Source` repository settings on GitHub -> Secrets and Variables -> Actions. Create a new repository secret named `ACTION_TOKEN` and paste your GitHub Personal Access Token there.
 
 ## Project Structure
 ```
 /
-├── components/       # UI Components (Viewer, Grid, Card, Pokedex)
+├── components/       # UI Components (Footer, Viewer, Grid, Card, Pokedex)
 ├── core/             # Business Logic
 │   ├── gen1/         # Generation 1 specific logic (Parser, Constants, Writer)
 │   ├── theme.ts      # UI Theming Logic
@@ -48,19 +48,3 @@ A web-based tool for editing Pokemon save files, specifically optimized for Gene
 - Vite
 - Recharts (Data Visualization)
 - Lucide React (Icons)
-
-## Roadmap
-- [x] Gen 1 Read Support
-- [x] Trainer Editing (UI State)
-- [x] Game Version Detection & Theming
-- [x] Full PC Box Support (12 Boxes)
-- [x] Detailed Stat Viewer (IVs/EVs)
-- [x] Pokedex & Rival Parsing
-- [x] Fix: Sprite Mapping (Internal ID vs National Dex)
-- [x] Heuristic Red/Blue Detection
-- [x] Gen 1 Write Support (Checksum calculation & Download modified save)
-- [x] Pokedex UI & Data Parsing
-- [x] Trade Evolutions & Box Stats
-- [x] Bug Fix: Theme Loading
-- [ ] Gen 2 Support (Gold/Silver/Crystal)
-- [ ] Advanced PC Management (Switch boxes)
