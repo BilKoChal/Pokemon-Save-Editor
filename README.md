@@ -1,6 +1,6 @@
 # BilKo's PC: Gen 1 Save Editor
 
-![Version](https://img.shields.io/badge/version-1.50.3-blue.svg)
+![Version](https://img.shields.io/badge/version-1.50.5-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Gen 1 Compatible](https://img.shields.io/badge/Game-Pokemon%20Red%2FBlue%2FYellow-red.svg)
 ![PWA Ready](https://img.shields.io/badge/PWA-Offline%20Ready-purple.svg)
@@ -41,7 +41,6 @@ Curated by **BilKo(Ch)al** with advanced AI support, this project aims to provid
     - **Power Selection**: Use **Ctrl+Click** to toggle selections and **Shift+Click** to select ranges of Pokemon.
     - **Select All**: Quickly select all Pokemon in a Box with one click.
     - **Smart Swap**: Select multiple Pokemon and click on an occupied slot to sequentially swap them.
-    - **Release**: **NEW!** Delete single or multiple Pokemon instantly with a confirmation prompt. Works in both Main Editor and Trade Center.
 - **Toast Notifications**: Modern, non-intrusive alerts for feedback and errors.
 - **Settings & Customization**: Switch between Original Game Boy sprites, Modern pixel art, or Official Artwork via the settings menu.
 - **Trainer Editor**: Modify your name, money (capped at 999,999), and view badges/playtime.
