@@ -1,6 +1,6 @@
 # BilKo's PC: Gen 1 Save Editor
 
-![Version](https://img.shields.io/badge/version-1.34.2-blue.svg)
+![Version](https://img.shields.io/badge/version-1.35.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Gen 1 Compatible](https://img.shields.io/badge/Game-Pokemon%20Red%2FBlue%2FYellow-red.svg)
 
@@ -25,6 +25,7 @@ Curated by **BilKo(Ch)al** with advanced AI support, this project aims to provid
 - **Import Pokemon**: Load a second `.sav` file alongside your main one.
 - **Cross-Save Trading**: Drag and drop (or select and click) to move Pokemon between two different save files.
 - **Batch Import**: Select multiple Pokemon from an external save and move them all at once to your game.
+- **Smart Pokedex**: Automatically updates your Pokedex (Seen & Caught) when you import a new species!
 - **Mobile Friendly**: New tabbed interface designed specifically for trading on mobile devices.
 - **Backup Support**: Safely export Pokemon to another file before starting a new game.
 
