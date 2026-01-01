@@ -1,6 +1,6 @@
 # BilKo's PC: Gen 1 Save Editor
 
-![Version](https://img.shields.io/badge/version-1.57.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.62.7-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Gen 1 Compatible](https://img.shields.io/badge/Game-Pokemon%20Red%2FBlue%2FYellow-red.svg)
 ![PWA Ready](https://img.shields.io/badge/PWA-Offline%20Ready-purple.svg)
