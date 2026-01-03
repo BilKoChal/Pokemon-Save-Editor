@@ -24,9 +24,9 @@
 | :--- | :--- | :--- | :--- |
 | **Gen 1** | Red, Blue, Yellow | ✅ **Full Support** | Complete editing & management. |
 | **Gen 2** | Gold, Silver, Crystal | ⚠️ **Beta** | Items, Party, & Box management operational. |
-| **Gen 3** | R, S, E, FR, LG | ⚠️ **Beta** | Parsing & Viewing implemented. |
-| **Gen 4** | D, P, Pt, HG, SS | 🚧 Read-Only | View-only mode. |
-| **Gen 5** | B, W, B2, W2 | 🚧 Read-Only | View-only mode. |
+| **Gen 3** | R, S, E, FR, LG | 🚧 **Broken / Experimental** | Basic Parser Only. Writing is unstable. |
+| **Gen 4** | D, P, Pt, HG, SS | 🚧 **Broken / Experimental** | Basic Parser Only. Encrypted blocks may fail. |
+| **Gen 5** | B, W, B2, W2 | 🚧 **Broken / Experimental** | Basic Parser Only. Checksum logic incomplete. |
 
 ---
 
