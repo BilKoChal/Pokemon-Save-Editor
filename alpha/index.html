@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BilKo's PC: Gen 1 Editor</title>
+    
+    <!-- Tailwind Config MUST be defined BEFORE loading the CDN script to ensure safelist is picked up correctly -->
+    <script>
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                'poke-red': '#EE1515',
+                'poke-dark': '#222224',
+                'poke-ui': '#F0F0F0',
+              }
+            }
+          },
+          // Safelist ensures these classes are generated even if not found in the initial HTML scan.
+          // Critical for React apps using dynamic classes with the CDN.
+          safelist: [
+            // Comprehensive Pattern for All Dynamic Colors used in TS files
+            // Covers: bg-red-600, text-blue-500, border-yellow-400, from-violet-500, to-fuchsia-600, etc.
+            {
+              pattern: /(bg|text|border|ring|from|to)-(red|blue|yellow|gray|slate|green|orange|violet|fuchsia|purple|pink|indigo|cyan|lime)-(50|100|200|300|400|500|600|700|800|900)/,
+              variants: ['hover', 'active', 'group-hover', 'focus'],
+            },
+            // Explicit Layout & Gradient Utilities
+            'bg-gradient-to-br', 
+            'bg-gradient-to-r',
+            'rendering-pixelated',
+            // Specific Type Colors that might fall outside standard ranges
+            'bg-gray-400', 'bg-orange-500', 'bg-blue-500', 'bg-green-500', 'bg-yellow-400', 
+            'bg-cyan-300', 'bg-red-700', 'bg-purple-500', 'bg-yellow-600', 'bg-indigo-300', 
+            'bg-pink-500', 'bg-lime-500', 'bg-yellow-800', 'bg-purple-800', 'bg-indigo-600'
+          ]
+        }
+      }
+    </script>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Global Overrides -->
+    <style>
+      /* Remove default arrow spinners from number inputs */
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    </style>
 
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "lucide-react": "https://esm.sh/lucide-react@0.469.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "fs": "https://esm.sh/fs@^0.0.1-security",
+    "vite-plugin-pwa": "https://esm.sh/vite-plugin-pwa@^1.2.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-Aw7kYFM9.js"></script>
+<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body class="bg-gray-100 min-h-screen w-full">
+    <div id="root" class="min-h-screen w-full"></div>
+  </body>
+</html>
